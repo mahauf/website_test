@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <style>
+        body{
+           
+            text-align: center;
+            margin-top: 350px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sign-up</h1>
+    <form action="index.html" name="valiform" onsubmit="return fun()" target="_blank">
+        <input type="text" name="name" id="" placeholder="Username"> <span id="i1"></span> <br><br>
+        <input type="password" name="password" id="" placeholder="Password"><br><br>
+        <input type="password" name="cpassword" id="" placeholder="Confirm Password"><br><br>
+        <input type="submit" value="Submit" onclick="fun()">
+    </form>
+    
+
+    <script>
+        function fun(){
+            var name = document.valiform.name.value;
+            var password = document.valiform.password.value;
+            var cnfrmpassword = document.valiform.cpassword.value;
+            if(name==""||password==""||cnfrmpassword==""){
+                document.getElementById("i1").innerHTML = "please input the feild"
+                return false;
+            }
+        }
+    </script> 
+</body>
+</html>
